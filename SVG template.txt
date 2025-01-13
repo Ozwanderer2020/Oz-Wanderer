@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive World Map</title>
+  <style>
+    svg {
+      width: 100%;
+      height: auto;
+    }
+    .country {
+      fill: #cccccc;
+      stroke: #666666;
+      stroke-width: 0.5;
+      cursor: pointer;
+    }
+    .country:hover {
+      fill: #f39c12;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clickable World Map</h1>
+  <p>Click on a country to navigate to its page.</p>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1001">
+    <g>
+      <!-- Example paths for countries -->
+      <path id="us" class="country" d="M100,200 L150,200 L150,250 L100,250 Z" onclick="navigateTo('us')"></path>
+      <path id="ca" class="country" d="M50,150 L100,150 L100,200 L50,200 Z" onclick="navigateTo('ca')"></path>
+      <path id="mx" class="country" d="M100,250 L150,250 L150,300 L100,300 Z" onclick="navigateTo('mx')"></path>
+      <!-- Add more country paths here -->
+    </g>
+  </svg>
+
+  <script>
+    function navigateTo(countryId) {
+      // Redirect to the country's page
+      window.location.href = countryId + ".html";
+    }
+  </script>
+</body>
+</html>

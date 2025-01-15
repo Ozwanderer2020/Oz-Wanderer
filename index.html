@@ -51,6 +51,47 @@ of course, flying.">
                 display: block; /* Show the message if in portrait mode */
             }
    }
+   /* Container for each text block and link list */
+   .text-block-container {
+            margin-bottom: 10px;
+        }
+
+        /* Text Block Style */
+        .text-block {
+            background-color: #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Hidden List Style */
+        .link-list {
+            display: none;
+            margin-top: 10px;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        /* Link Item Style */
+        .link-item {
+            padding: 5px 0;
+        }
+
+        .link-item a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .link-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Show the list when hovering over the container (text block + list) */
+        .text-block-container:hover .link-list {
+            display: block;
+        }
 </style>
 
 </head>

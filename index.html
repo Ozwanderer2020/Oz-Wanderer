@@ -19,8 +19,9 @@ of course, flying.">
 <style>
     body {
         margin: 0; /* Remove default browser margin */
+        padding: 0;
     }
-    .container {
+    .container {  /* refers to the body container */
     display: flex;
     height: 100vh; /* Make the parent container take up the full viewport height */
     Margin: 0;
@@ -30,6 +31,9 @@ of course, flying.">
         margin: 0;
         box-sizing: border-box;  /* use this box model, so padding is included in total size */
         padding: 1%;
+    }
+    .sidepanes .bigmap {
+        overflow: auto;
     }
 </style>
 
@@ -43,7 +47,7 @@ of course, flying.">
     <div class="sidepanes", 
     style="position: absolute; top: 0; left: 86%; background-color: rgb(255, 243, 80); width:14%; height: 120%;"> this is the right pane </div>
 
-    <div style="text-align: center;">
+    <div class="bigmap", style="text-align: center;">
         <!--
         <iframe src="./World%20Footprint%20Oz%20Centric%2020250112.svg" width="72%" height="1000px" title="Click an expedition to view"></iframe>
         -->

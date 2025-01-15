@@ -37,10 +37,10 @@ of course, flying.">
     .sidepanes .bigmap {
         overflow: auto;
     }
-    @media (orientation: portrait) {  /*ask to rotate for best viewing */
-        .narrow-message {
-            display: block;
-        }
+   @media (orientation: portrait) {
+            .portrait-message {
+                display: block; /* Show the message in portrait mode */
+            }
 </style>
 
 </head>
@@ -70,8 +70,9 @@ of course, flying.">
 
         // Display it in the HTML element with id "version"
         document.getElementById('version').textContent = version;
-    </script>
-    <div class="narrow-message">
+    </script
+        
+    <div class="portrait-message">
         <p style="text-align: center;"> Your screen is too narrow for the best viewing experience. </p>
         <p style="text-align: center;"> Please rotate your device or use a larger screen.</p>
     </div>

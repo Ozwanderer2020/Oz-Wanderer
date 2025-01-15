@@ -3,60 +3,50 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Oz Wanderer</title>
-<style>
-   /* Disable scrolling for the parent page */
-        body, html {
-            overflow: hidden;
-            height: 100%;
-            margin: 0;
-        }
-    /* Hide the message by default */
-    .narrow-message {
-        display: none;
-        text-align: center;
-        padding: 10px;
-        background-color: #f8d7da;
-        color: #721c24;
-        border: 1px solid #f5c6cb;
-        margin: 20px;
-    }
+<!-- for responisveness, scalability-->
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<!-- Page description for search engines -->
+<meta name="description" content="Oz Wanderer is a Worldwide traveler. Here are the stories of his travels for lesisure 
+since retirement on 911 ( 11 Sept 2001 ). His footprints covers the Arctic and Antarctic and 80 odd countries in between.
+The travels are documented primary using photography and video recordings, plus footprint logging using GPS loggers. 
+Modes of travels includes 4x4 cars, campers, ships, hiking, walking and 
+of course, flying.">
 
-    /* Show the message when the screen width is below 800px */
-    @media (orientation: portrait) {
-        .narrow-message {
-            display: block;
-        }
+<title>Oz Wanderer</title>
+
+<style>
+    body {
+        margin: 0; /* Remove default browser margin */
+    }
+    .sidepanes {
+        max-width: 14%;
+        margin: 0; /* Center the container */
+        box-sizing: border-box;  /* use this box model, so padding is included in total size */
+        padding: 1%;
     }
 </style>
+
 </head>
 
 <body>
-   
-<div style="text-align: center;">
-<!--
-<iframe src="./World%20Footprint%20Oz%20Centric%2020250112.svg" width="72%" height="1000px" title="Click an expedition to view"></iframe>
--->
 
-<Object data="./World%20Footprint%20Oz%20Centric%2020250112.svg" type="image/svg+xml" title="Click an expedition to view" 
-   style="top: 0%; left: 14%; width: 72%; height: auto;"></object>
+    <div class="sidepanes", 
+    style="position: absolute; top: 0px; left: 0px; background-color: rgb(109, 255, 80); width:14%; height: 100%;"> this is the left pane </div>
 
-</div>
-<div class="narrow-message">
-    <p style="text-align: center;"> Your screen is too narrow for the best viewing experience. </p>
-    <p style="text-align: center;"> Please rotate your device or use a larger screen.</p>
-</div>
+    <div class="sidepanes", 
+    style="position: absolute; top: 0; left: 86%; background-color: rgb(255, 243, 80); width:14%; height: 100%;"> this is the right pane </div>
 
-<div style="position: absolute; top: 0px; left: 0px; background-color: rgb(109, 255, 80); width:14%; height: 150%;">
-   
-    <object data="LeftPane.html"  ></object>
-</div>
+    <div style="text-align: center;">
+        <!--
+        <iframe src="./World%20Footprint%20Oz%20Centric%2020250112.svg" width="72%" height="1000px" title="Click an expedition to view"></iframe>
+        -->
+        
+        <Object data="./World%20Footprint%20Oz%20Centric%2020250112.svg" type="image/svg+xml" title="Click an expedition to view" 
+           style="top: 0%; left: 14%; width: 72%; height: auto;"></object>
+        
+        </div>
 
-<div style="position: absolute; top: 0px; left:86% ; background-color: rgb(255, 243, 80); width: 14%; height:150%;">
-   
-    <object data="RightPane.html" ></object>
-</div>
-
+    
 
 
 </body>

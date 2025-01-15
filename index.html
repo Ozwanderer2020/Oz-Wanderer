@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
+<meta name="version" content="19-21">
     
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
@@ -20,6 +21,7 @@ of course, flying.">
     body {
         margin: 0; /* Remove default browser margin */
         padding: 0;
+        text-align: center;
     }
     .container {  /* refers to the body container */
     display: flex;
@@ -35,6 +37,10 @@ of course, flying.">
     .sidepanes .bigmap {
         overflow: auto;
     }
+    @media (orientation: portrait) {  /*ask to rotate for best viewing */
+        .narrow-message {
+            display: block;
+        }
 </style>
 
 </head>
@@ -56,6 +62,19 @@ of course, flying.">
            style="top: 0%; left: 14%; width: 72%; height: auto;"></object>
         
         </div>
+
+    Version: <span id="version"></span>
+    <script>
+        // Get the version from the meta tag
+        const version = document.querySelector('meta[name="version"]').getAttribute('content');
+
+        // Display it in the HTML element with id "version"
+        document.getElementById('version').textContent = version;
+    </script>
+    <div class="narrow-message">
+        <p style="text-align: center;"> Your screen is too narrow for the best viewing experience. </p>
+        <p style="text-align: center;"> Please rotate your device or use a larger screen.</p>
+    </div>
 
     
 

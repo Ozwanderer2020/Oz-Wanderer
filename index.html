@@ -106,7 +106,8 @@ of course, flying.">
         <div class="PrimeLink-container">
             <div class="PrimeLink">HOME</div>
             <ul class="link-list">
-                <li class="link-item"><a href="#">World</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap ('./World%20Footprint%20Oz%20Centric%2020250112.svg' >World</a></li>
+<a href="#" onclick="loadInObject('https://example.com')">Load Example.com</a>
             </ul>
         </div>
 
@@ -148,6 +149,12 @@ of course, flying.">
     
             // Display it in the HTML element with id "version"
             document.getElementById('version').textContent = version;
+
+            // Load an URL into the Object Frame BigMap
+
+        function loadInBigMap(url) {
+            document.getElementById('BigMap').data = url;
+            
         </script>
     </div>
 
@@ -161,7 +168,7 @@ of course, flying.">
 
     <div class="bigmap", style="text-align: center;">
         <!--
-        <iframe src="./World%20Footprint%20Oz%20Centric%2020250112.svg" width="72%" height="1000px" title="Click an expedition to view"></iframe>
+        <iframe src="./World Footprint Oz Centric 20250112.svg" width="72%" height="1000px" title="Click an expedition to view"></iframe>
         -->
         
         <Object id="BigMap" data="./World%20Footprint%20Oz%20Centric%2020250112.svg" type="image/svg+xml" title="Click an expedition to view" 

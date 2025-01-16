@@ -3,7 +3,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a.13.23">
+<meta name="version" content="a.15.05">
     
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
@@ -35,7 +35,7 @@ of course, flying.">
         box-sizing: border-box;  /* use this box model, so padding is included in total size */
         padding: 1%;
     }
-    .sidepanes .bigmap {
+    .sidepanes .bigmapContainer {
         overflow: auto;
     }
     .portrait-message {
@@ -106,37 +106,37 @@ of course, flying.">
         <div class="PrimeLink-container">
             <div class="PrimeLink">HOME</div>
             <ul class="link-list">
-                <li class="link-item"><a href="#" onClick="loadInBigMap('./World Footprint Oz Centric 20250112.svg')">World</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyWorld.svg')">World</a></li>
             </ul>
         </div>
 
         <div class="PrimeLink-container">
             <div class="PrimeLink">Austral Asia (Australia & Asia)</div>
             <ul class="link-list">
-                <li class="link-item"><a href="#" onClick="loadInBigMap('./World%20Footprint%20Oz%20Centric%2020250112.svg')">Australia</a></li>
-                <li class="link-item"><a href="#">East Asia</a></li>
-                <li class="link-item"><a href="#">SE Asia</a></li>
-                <li class="link-item"><a href="#">South Asia</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyCentralia.svg')">Australia</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyCentralia.svg')">East Asia</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyCentralia.svg')">SE Asia</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyCentralia.svg')">South Asia</a></li>
             </ul>
         </div>
 
         <div class="PrimeLink-container">
             <div class="PrimeLink">Europe Africa</div>
             <ul class="link-list">
-                <li class="link-item"><a href="#">Arctic</a></li>
-                <li class="link-item"><a href="#">Europe</a></li>
-                <li class="link-item"><a href="#">Middle East</a></li>
-                <li class="link-item"><a href="#">Africa</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyEuropeAfrica.svg')">Arctic</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyEuropeAfrica.svg')">Europe</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyEuropeAfrica.svg')">Middle East</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyEuropeAfrica.svg')">Africa</a></li>
             </ul>
         </div>
 
         <div class="PrimeLink-container">
             <div class="PrimeLink">Americas</div>
             <ul class="link-list">
-                <li class="link-item"><a href="#">Antarctica</a></li>
-                <li class="link-item"><a href="#">North America</a></li>
-                <li class="link-item"><a href="#">Central America</a></li>
-                <li class="link-item"><a href="#">South America</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyAmericas.svg')">Antarctica</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyAmericas.svg')">North America</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyAmericas.svg')">Central America</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyAmericas.svg')">South America</a></li>
             </ul>
         </div>
 
@@ -165,17 +165,17 @@ of course, flying.">
 
     <div class="sidepanes", 
     style="position: absolute; top: 0; left: 86%; background-color: rgb(255, 243, 80); width:14%; height: 120%;"> this is the right pane </div>
-
-    <div class="bigmap", style="text-align: center;">
-        <!--
-        <iframe src="./World Footprint Oz Centric 20250112.svg" width="72%" height="1000px" title="Click an expedition to view"></iframe>
-        -->
+ <!--
+    <div class="bigmapContainer", style="text-align: center; overflow: hidden;">
+        <**!--
+        <iframe src="./MyWorld.svg" width="72%" height="1000px" title="Click an expedition to view"></iframe>
+        --**>
         
-        <Object id="BigMap" data="./World Footprint Oz Centric 20250112.svg" type="image/svg+xml" title="Click an expedition to view" 
-           style="top: 0%; left: 14%; width: 72%; height: auto;"></object>
+        <Object id="BigMap" data="./MyWorld.svg" type="image/svg+xml" title="Click an expedition to view" 
+           style="top: 0%; left: 14%; width: 72%; height: auto; max-width: 100%; max-height: 100%; object-fit: contain;"></object>
         
         </div>
-    
+    -->  
    
         
     <div class="portrait-message">

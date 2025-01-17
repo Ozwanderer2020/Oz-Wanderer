@@ -3,7 +3,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a.13.58">
+<meta name="version" content="a.16.66">
     
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
@@ -52,7 +52,7 @@ of course, flying.">
         height: 100%;
         margin: 0 auto; /* Center the container */
         text-align: center;
-        /* border: 10px solid blue;  use for debugging */
+         border: 10px solid blue;  /*use for debugging */
     }
 
     #BigMap {  /*# is used for id, "." is for classes
@@ -61,20 +61,26 @@ of course, flying.">
         left: 0;
         width: 100%; /* Fill the container's width */
         height: 100%; /* Maintain aspect ratio */
-        object-fit: scale-down; /* Fit within the object frame */
+        /*object-fit: scale-down; /* Fit within the object frame */
         overflow: hidden; /* Prevent content overflow */
     }
 
     .portrait-message {
-        display: none;   /* initially hide the message */
+        display: none;
+        position: absolute; /* Allow positioning within the container */
         text-align: center;
         padding: 10px;
-        background-color: #f8d7da;
-        color: #721c24;
-        border: 1px solid #f5c6cb;
-        margin: 20px;
+        top: 80%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust for actual center alignment */
+        background-color: #f8d7da; /* Background for message box */
+        color: #721c24; /* Text color */
+        border: 1px solid #f5c6cb; /* Border styling */
+        border-radius: 5px; /* Rounded corners (optional) */
+        width: 80%; /* Adjust width as needed */
+        z-index: 9999; /* Ensure it is above other elements */
     }
-   @media (orientation: portrait) {
+   @media (max-width: 768px) and (orientation: portrait) {
             .portrait-message {
                 display: block; /* Show the message if in portrait mode */
             }
@@ -184,34 +190,32 @@ of course, flying.">
                   }
             
         </script>
-    </div>
-
-    
-    
+    </div>    
     
     </div>
 
     <div class="sidepanes", 
     style="position: absolute; top: 0; left: 86%; background-color: rgb(255, 243, 80); width:14%; height: 120%;"> this is the right pane </div>
 
-  
+     
     <div class="bigmapContainer" style="background: lightblue " >
+
+ <!-- an iFrame or Object frame is needed to make the SVG file interactive, otherwise it would just be a static image -->
+
         <!--
         <iframe src="./MyWorld.svg" width="72%" height="1000px" title="Click an expedition to view"></iframe>
         -->
         
-        <!-- an iFrame or Object frame is needed to make the SVG file interactive, otherwise it would just be a static image -->
-
         <Object id="BigMap" data="./MyWorld.svg" type="image/svg+xml" title="Click an expedition to view"></object>
         
-    </div>
-
-
+         <div class="portrait-message">
+            <p style="text-align: center;"> Your screen is too narrow for the best viewing experience. </p>
+            <p style="text-align: center;"> Please rotate your device or use a larger screen.</p>
+        </div>
         
-    <div class="portrait-message">
-        <p style="text-align: center;"> Your screen is too narrow for the best viewing experience. </p>
-        <p style="text-align: center;"> Please rotate your device or use a larger screen.</p>
     </div>
+        
+    
 
     
 

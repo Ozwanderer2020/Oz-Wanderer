@@ -3,7 +3,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a.15.05">
+<meta name="version" content="a.13.03">
     
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
@@ -18,6 +18,13 @@ of course, flying.">
 <title>Oz Wanderer</title>
 
 <style>
+    /* global styles for non-inheritable settings */
+*,  
+*::before,
+*::after { box-sizing: border-box;  /* use this box model, so padding is included in total size */
+            margin: 0;
+    }
+
     body {
         margin: 0; /* Remove default browser margin */
         padding: 0;
@@ -25,19 +32,35 @@ of course, flying.">
         font: 1rem;
     }
     .container {  /* refers to the body container */
-    display: flex;
-    height: 100vh; /* Make the parent container take up the full viewport height */
-    Margin: 0;
+        display: flex;
+        height: 100vh; /* Make the parent container take up the full viewport height */
+        Margin: 0;
     }
     .sidepanes {
         max-width: 14%;
-        margin: 0;
-        box-sizing: border-box;  /* use this box model, so padding is included in total size */
         padding: 1%;
     }
-    .sidepanes .bigmapContainer {
+    .sidepanes {
         overflow: auto;
     }
+    .bigmapContainer{
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 14%;
+        width: 72%;
+        height: auto; /* Let height adapt to content */
+        margin: 0 auto; /* Center the container */
+        text-align: center;
+    }
+
+    #BigMap {  /*# is used for id, "." is for classes
+        width: 100%; /* Fill the container's width */
+        height: 100%; /* Maintain aspect ratio */
+        object-fit: scale-down; /* Fit within the object frame */
+        overflow: hidden; /* Prevent content overflow */
+    }
+
     .portrait-message {
         display: none;   /* initially hide the message */
         text-align: center;
@@ -55,6 +78,7 @@ of course, flying.">
    /* Container for each text block and link list */
    .PrimeLink-container {
             margin-bottom: 10px;
+            font-size: 0.8rem;
         }
 
         /* Text Block Style */
@@ -63,7 +87,6 @@ of course, flying.">
             padding: 1%;
             margin-bottom: 2%;
             cursor: pointer;
-            font-size: 1rem;
             font-weight: bold;
         }
 
@@ -72,7 +95,7 @@ of course, flying.">
             display: none;
             margin-top: 1%;
             padding: 0;
-            list-style-type: none;
+            list-style-type: none;  /* no bullets */
         }
 
         /* Link Item Style */
@@ -93,6 +116,7 @@ of course, flying.">
         .PrimeLink-container:hover .link-list {
             display: block;
         }
+
 </style>
 
 </head>
@@ -123,10 +147,10 @@ of course, flying.">
         <div class="PrimeLink-container">
             <div class="PrimeLink">Europe Africa</div>
             <ul class="link-list">
-                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyEuropeAfrica.svg')">Arctic</a></li>
-                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyEuropeAfrica.svg')">Europe</a></li>
-                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyEuropeAfrica.svg')">Middle East</a></li>
-                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyEuropeAfrica.svg')">Africa</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyEuroAfrica.svg')">Arctic</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyEuroAfrica.svg')">Europe</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyEuroAfrica.svg')">Middle East</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyEuroAfrica.svg')">Africa</a></li>
             </ul>
         </div>
 
@@ -165,18 +189,20 @@ of course, flying.">
 
     <div class="sidepanes", 
     style="position: absolute; top: 0; left: 86%; background-color: rgb(255, 243, 80); width:14%; height: 120%;"> this is the right pane </div>
- <!--
-    <div class="bigmapContainer", style="text-align: center; overflow: hidden;">
-        <**!--
+
+  
+    <div class="bigmapContainer" style="background: lightblue " >
+        <!--
         <iframe src="./MyWorld.svg" width="72%" height="1000px" title="Click an expedition to view"></iframe>
-        --**>
+        -->
         
-        <Object id="BigMap" data="./MyWorld.svg" type="image/svg+xml" title="Click an expedition to view" 
-           style="top: 0%; left: 14%; width: 72%; height: auto; max-width: 100%; max-height: 100%; object-fit: contain;"></object>
+        <!-- an iFrame or Object frame is needed to make the SVG file interactive, otherwise it would just be a static image -->
+
+        <Object id="BigMap" data="./MyWorld.svg" type="image/svg+xml" title="Click an expedition to view"></object>
         
-        </div>
-    -->  
-   
+    </div>
+
+
         
     <div class="portrait-message">
         <p style="text-align: center;"> Your screen is too narrow for the best viewing experience. </p>

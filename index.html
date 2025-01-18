@@ -3,7 +3,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a.16.68">
+<meta name="version" content="a.19:19">
     
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
@@ -125,6 +125,27 @@ of course, flying.">
         .PrimeLink-container:hover .link-list {
             display: block;
         }
+        /* popup links on maps */
+        .maplink-box {
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .maplink-box a {
+        display: block;
+        margin: 5px 0;
+        text-decoration: none;
+        color: blue;
+        }
+
+        .maplink-box a:hover {
+        text-decoration: underline;
+        }
 
 </style>
 
@@ -199,25 +220,70 @@ of course, flying.">
      
     <div class="bigmapContainer" style="background: lightblue " >
 
- <!-- an iFrame or Object frame is needed to make the SVG file interactive, otherwise it would just be a static image -->
-
-        <!--
-        <iframe src="./MyWorld.svg" width="72%" height="1000px" title="Click an expedition to view"></iframe>
-        -->
         
         <Object id="BigMap" data="./MyWorld.svg" type="image/svg+xml" title="Click an expedition to view"></object>
-        
-         <div class="portrait-message">
-            <p style="text-align: center;"> Your screen is too narrow for the best viewing experience. </p>
-            <p style="text-align: center;"> Please rotate your device or use a larger screen.</p>
-        </div>
-        
+
+            <!-- Map Popup link list -->
+
+            <div id="Oz-links" class="maplink-box">
+                <a href="./Australia/AustraliaVideos.html" target="_blank">Videos</a>
+                <a href="./Australia/AustraliaAlbumns.html" target="_blank">Albumn</a>
+                <a href="./Australia/AustraliaBlogs.html" target="_blank">Blogs</a>
+            </div>        
     </div>
+      
+    <script>
         
+        document.addEventListener("DOMContentLoaded", () => {
+          const svgObject = document.getElementById("BigMap");
+          const links = document.getElementById("Oz-links");
     
+          svgObject.addEventListener("load", () => {
+            const svgDoc = svgObject.contentDocument;
+            const targetPath = svgDoc.querySelector(".hover-effect");
 
+          let popupLocked = false;  // initialise popupLocked flag
+
+            // Show links on hover
+            targetPath.addEventListener("mouseover", (event) => {
+               if (!popupLocked) {
+                links.style.display = "block";
+                links.style.left = `${event.pageX + 1}px`;
+                links.style.top = `${event.pageY + 1}px`;
+                popupLocked=true;
+                }
+            });
+            // Update position on mousemove ( only if not locked )
+            targetPath.addEventListener("mousemove", (event) => {
+            if (!popupLocked) {
+               links.style.left = `${event.pageX + 1}px`;
+               links.style.top = `${event.pageY + 1}px`;
+               popupLocked=true;
+                }
+             });
+            // Hide links on mouseout (only if not locked)
+            targetPath.addEventListener("mouseout", () => {
+                links.style.display = "none";
+                popupLocked=false;
+            });
+            // Lock popup when mouse enters the links block
+           links.addEventListener("mouseenter", () => {
+            links.style.display = "block";
+            popupLocked = true; // Prevent the popup from moving
+           });
+            // Unlock popup and hide it when the mouse leaves the links block
+            links.addEventListener("mouseleave", () => {
+              popupLocked=false;
+              links.style.display = "none";
+            });
+        });
+    });
+      </script>
     
-
+    <div class="portrait-message">
+        <p style="text-align: center;"> Your screen is too narrow for the best viewing experience. </p>
+        <p style="text-align: center;"> Please rotate your device or use a larger screen.</p>
+    </div>
 
 </body>
 

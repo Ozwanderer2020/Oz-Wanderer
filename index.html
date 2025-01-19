@@ -3,7 +3,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a.20.49">
+<meta name="version" content="20.09.00">
     
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
@@ -131,9 +131,10 @@ of course, flying.">
         position: absolute;
         background: white;
         border: 1px solid #ccc;
-        padding: 5px;
-        border-radius: 5px;
+        padding: 3px;
+        border-radius: 3px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-size: 0.6rem;
         }
 
         .maplink-box a {
@@ -156,7 +157,7 @@ of course, flying.">
     <div class="sidepanes", 
     style="position: absolute; top: 0px; left: 0px; background-color: rgb(109, 255, 80); width:14%; height: 100%;">
         <div class="left-panel">
-        <!-- Text Blocks with Link Lists -->
+        <!-- Text Blocks with Link Lists ( eft pane )-->
         <div class="PrimeLink-container">
             <div class="PrimeLink">HOME</div>
             <ul class="link-list">
@@ -262,28 +263,41 @@ of course, flying.">
             </div>
     </div>
       
-    <script>
+<script>
+
+    // Check if the map has been loaded into Object "BigMap"
+    // Once loaded, look for all elements with the class "hover-effect"
+    // For each of the returned elements, get their data-path-id attribute
+    // Match the data-path-id with the links block for that path and 
+    // listen if the mouse is interacting with it in either one of the following
+    // mouseover, mousemove, mouseout, mouseenter, mouseleave
+    // and popup the links block when mouse in over the path
+    // links block contain links related to that path.
+    // If nothing happens, keep listening one path at a cycling of the loop
         
-        document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
           const svgObject = document.getElementById("BigMap");
     
           svgObject.addEventListener("load", () => {
             
             const svgDoc = svgObject.contentDocument;
             
-            const paths = Array.from(svgDoc.getElementsByClassName("hover-effect"));
-                        
-          let popupLocked = false;  // initialise popupLocked flag
-console.log("paths==", paths[0], "   ", paths[1],"   ", paths[2],"   ", paths[3],"   ", paths[4],"   ", paths[5]);
-          paths.forEach( path => {
+            // const paths = Array.from(svgDoc.getElementsByClassName("hover-effect")); //query all hover-effect paths
+           // This works as well 
+           const paths = svgDoc.querySelectorAll(".hover-effect"); // query all hover-effect paths 
+
+          let popupLocked = false;  // initialise popupLocked flag, this is used to
+                                    // fix the positon of the pop up lists for mouse
+                                    // to move in and click.
+
+        paths.forEach( path => {
             const linkId = path.dataset.pathId; // Assume each path has a `data-link-id` attribute
-            console.log("linkID == ", linkId);
-            let links = document.getElementById(linkId); // Get the corresponding links div
+            let links = document.getElementById(linkId); // matchup with the corresponding links div
                       
             // Show links on hover
             path.addEventListener("mouseover", (event) => {
                if (!popupLocked) {
-                links.style.display = "block";
+                links.style.display = "block";  // make links list visible
                 links.style.left = `${event.pageX + 1}px`;
                 links.style.top = `${event.pageY + 1}px`;
                 popupLocked=true;
@@ -299,23 +313,23 @@ console.log("paths==", paths[0], "   ", paths[1],"   ", paths[2],"   ", paths[3]
              });
             // Hide links on mouseout (only if not locked)
             path.addEventListener("mouseout", () => {
-                links.style.display = "none";
+                links.style.display = "none";   // make links list invisible
                 popupLocked=false;
             });
             // Lock popup when mouse enters the links block
            links.addEventListener("mouseenter", () => {
-            links.style.display = "block";
+            links.style.display = "block";  // make links list visible
             popupLocked = true; // Prevent the popup from moving
            });
             // Unlock popup and hide it when the mouse leaves the links block
             links.addEventListener("mouseleave", () => {
               popupLocked=false;
-              links.style.display = "none";
+              links.style.display = "none";  // make links list visible
             });
         });
     });
 });
-      </script>
+</script>
     
     <div class="portrait-message">
         <p style="text-align: center;"> Your screen is too narrow for the best viewing experience. </p>

@@ -3,7 +3,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a.19:19">
+<meta name="version" content="a.21.10">
     
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
@@ -230,22 +230,49 @@ of course, flying.">
                 <a href="./Australia/AustraliaAlbumns.html" target="_blank">Albumn</a>
                 <a href="./Australia/AustraliaBlogs.html" target="_blank">Blogs</a>
             </div>        
+
+            <div id="Iceland-links" class="maplink-box">
+                <a href="./Iceland/IcelandVideos.html" target="_blank">Videos</a>
+                <a href="./Iceland/IcelandAlbumns.html" target="_blank">Albumn</a>
+                <a href="./Iceland/IcelandBlogs.html" target="_blank">Blogs</a>
+            </div>        
     </div>
       
     <script>
         
         document.addEventListener("DOMContentLoaded", () => {
           const svgObject = document.getElementById("BigMap");
-          const links = document.getElementById("Oz-links");
     
           svgObject.addEventListener("load", () => {
+            
+            console.log("SVG loaded successfully"); // Debugging load event
             const svgDoc = svgObject.contentDocument;
-            const targetPath = svgDoc.querySelector(".hover-effect");
+            if (!svgDoc) {
+      console.error("SVG document is not accessible.");
+      return;
+    }
+            const paths = svgDoc.querySelector(".hover-effect");
+            const pathsArray = Array.from(paths);
+            console.log("paths=",pathsArray);
+            console.log(`Found ${pathsArray.length} paths with class 'hover-effect'`);
+
 
           let popupLocked = false;  // initialise popupLocked flag
 
+          pathsArray.forEach((path) => {
+            const linkId = path.dataset.pathId; // Assume each path has a `data-link-id` attribute
+            const links = document.getElementById(linkId); // Get the corresponding links div
+            console.log("attaching mouseover to path=", path)
+            path.addEventListener("mouseover", (event) => {
+        console.log("Mouseover triggered on path", event.target); // Debug: Check if mouseover is firing
+      });
+           // if (!links) {
+            //    console.error(`No links element found for link ID: ${pathId}`);
+             //   return;
+            //}
+
             // Show links on hover
-            targetPath.addEventListener("mouseover", (event) => {
+            path.addEventListener("mouseover", (event) => {
                if (!popupLocked) {
                 links.style.display = "block";
                 links.style.left = `${event.pageX + 1}px`;
@@ -254,7 +281,7 @@ of course, flying.">
                 }
             });
             // Update position on mousemove ( only if not locked )
-            targetPath.addEventListener("mousemove", (event) => {
+            path.addEventListener("mousemove", (event) => {
             if (!popupLocked) {
                links.style.left = `${event.pageX + 1}px`;
                links.style.top = `${event.pageY + 1}px`;
@@ -262,7 +289,7 @@ of course, flying.">
                 }
              });
             // Hide links on mouseout (only if not locked)
-            targetPath.addEventListener("mouseout", () => {
+            path.addEventListener("mouseout", () => {
                 links.style.display = "none";
                 popupLocked=false;
             });
@@ -278,6 +305,7 @@ of course, flying.">
             });
         });
     });
+});
       </script>
     
     <div class="portrait-message">

@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a13.06.59">
+<meta name="version" content="a08.22.09">
     
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
@@ -12,7 +12,7 @@
 <meta name="description" content="OzWanderer roams the Outbacks of Australia in 4x4 campers since 2010.
 5 Laps of Australia has been done plus plenty of shorter expiditions.">
 
-<title>Oz Wanderer Polar Footprints</title>
+<title>Oz Wanderer Australia Footprints</title>
 
 <style>
     /* global styles for non-inheritable settings */
@@ -157,12 +157,40 @@
 
         <!-- Text Blocks with Link Lists ( left pane )-->
         <div class="PrimeLink-container">
-            <div class="PrimeLink">The Polars</div>
+            <div class="PrimeLink"><a href="#" onClick="loadInBigMap('./Australia 2024.svg')">Australia HOME</a></div>
+        </div>
+
+        <div class="PrimeLink-container">
+            <div class="PrimeLink">Laps of Australia</div>
             <ul class="link-list">
-                <li class="link-item"><a href="./Polars.html">Polar Home</a></li>
-                <li class="link-item"><a href="./Antarctica.html">Antarctica</a></li>
-                <li class="link-item"><a href="./Arctic.html">Arctic & Greenland</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Footprint 2011 Lap.svg')">2011 First Lap</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Footprint 2013 Lap.svg')">2013 2nd Lap</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Footprint 2015 Lap.svg')">2015 3rd Lap</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Footprint 2017 Lap.svg')">2017 4th Lap</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Footprint 5th Lap I.svg')">2017 5th Lap ( paused )</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Footprint 2024 Lap.svg')">2024 5th Lap II</a></li>
             </ul>
+        </div>
+
+        <div class="PrimeLink-container">
+            <div class="PrimeLink">Misc. Overland Expeditions</div>
+            <ul class="link-list">
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Melbourne-Townsville Expedition.svg')">1975 Melbourne-Townsville Expedition</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Footprint Lake Eyre 2009.svg')">2009 Outback in 4x2</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Tasmania 2010.svg')">2010 Tasmania (4x2)</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Footprint Kangaroo Island 2011.svg')">Kangaroo Island 2010 (4x4)</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Vic High Country 2011.svg')">Vic High Country 2011 (4x4)</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Vic High Country 2014.svg')">Vic High Country 2014 (4x4)</a></li>
+                <li class="link-item"><a href="#" onClick="loadInBigMap('./Sandi Maiden Trip.svg')">2022 Sandi's Maiden Expedition(4x4)</a></li>
+            </ul>
+        </div>
+
+        <div class="PrimeLink-container">
+            <div class="PrimeLink"><a href="https://www.youtube.com/playlist?list=PLSXTW29KgLgt13Lnv1EgQV2OZ1JC8yQdp" target="_blank">4x4 Adventures</a></div>
+        </div>
+
+        <div class="PrimeLink-container">
+            <div class="PrimeLink"><a href="https://www.youtube.com/playlist?list=PLSXTW29KgLgvHOCljskLFM8SHoSHhjEu-" target="_blank">Busw Walks & Hikes</a></div>
         </div>
 
         <div class="PrimeLink">
@@ -234,23 +262,87 @@
     <div class="bigmapContainer" style="background: lightblue " >
 
         <!-- Load the big map into the central work area -->
-        <Object id="BigMap" data="./Footprint Antarctica 2017.svg" type="image/svg+xml" title="Click an expedition to view"> </object>
+        <Object id="BigMap" data="./Australia 2024.svg" type="image/svg+xml" title="Click an expedition to view"> </object>
 
             <!-- Map Popup link list -->
              <!-- Youtube and Google photo doesn't allow their links to be opeened in Object Frame-->
 
-            <div id="Antarctica2017" class="maplink-box">
-                <a href="https://www.youtube.com/playlist?list=PLSXTW29KgLguQY7_WJxSZnJ-u_ywLGnoE">Videos</a>
-                <a href="https://vimeo.com/247103346">album</a>
-                <a href="#" onclick="loadInBigMap('https://2017chileantarcticabrazil.blogspot.com/2018/01/index-2017-chile-antarctica-brazil.html')">Blogs</a>
+            <div id="2011Lap" class="maplink-box">
+
+             <!--    <a href="./AustraliaVideos.html">Videos</a>
+                <a href="./Australiaalbums.html">album</a> -->
+                <a href="#" onclick="loadInBigMap('https://australiadt.blogspot.com/2015/12/index.html')">Blog</a>
+            </div>        
+
+            <div id="2013Lap" class="maplink-box">
+                <a href="https://www.youtube.com/watch?v=E-JuorfWVXk" target="_blank">Videos</a>
+               <!--<a href="https://goo.gl/photos/pcMBK1pMM9xy7BnR6">album</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Blogs</a> -->
             </div>
-            <!--
-            <div id="xx" class="maplink-box">
+            
+            <div id="2015Lap" class="maplink-box">
+                <a href="#">Sorry,</a>
+                <a href="#">Under</a>
+                <a href="#">Construction</a>
+            </div>
+            
+            <div id="2017Lap" class="maplink-box">
+                <a href="https://www.youtube.com/watch?v=uMRv5vfFDzs" target="_blank">Video</a>
+                <!-- <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">album</a>
+                <a href="#" onclick="loadInBigMap('https://2014southernafrica.blogspot.com/2014/10/index.html')">Blogs</a> -->
+            </div> 
+            <div id="2024Lap" class="maplink-box">
+                <a href="#">Sorry,</a>
+                <a href="#">Under</a>
+                <a href="#">Construction</a>
+            </div>             
+            <div id="tas2010" class="maplink-box">
+                <a href="#">Sorry,</a>
+                <a href="#">Under</a>
+                <a href="#">Construction</a>
+            </div>
+            <div id="VicHigh2011" class="maplink-box">
+                <a href=https://www.youtube.com/watch?v=leALWzPhqpQ&t=200">Videos</a>
+                <!-- <a href="">album</a>
+                <a href="#" onclick="loadInBigMap('')">Blogs</a>  -->
+            </div>
+            <div id="4x4-adventures" class="maplink-box">
+                <a href="https://www.youtube.com/playlist?list=PLSXTW29KgLgt13Lnv1EgQV2OZ1JC8yQdp">Videos</a>
+                <!-- <a href="#" onclick="loadInBigMap('')">album</a>
+                <a href="#" onclick="loadInBigMap('')">Blogs</a>  -->
+            </div>
+             
+            <div id="VicHigh2014" class="maplink-box">
+                <!-- <a href="">Videos</a>
+                <a href="#" onclick="loadInBigMap('')">album</a> -->
+                <a href="#" onclick="loadInBigMap('https://vichighcountry2014.blogspot.com/2016/06/index.html')">Blogs</a>
+            </div>
+            <div id="SandiMaiden" class="maplink-box">
+                <!-- <a href="#">Sorry</a>
+                <a href="#" onclick="loadInBigMap('')">Under</a> -->
+                <a href="#" onclick="loadInBigMap('https://sandi-maiden.blogspot.com/2025/02/sandis-maiden-trip-photo-albums.html')">Albums</a>
+            </div>
+            <div id="5thLapI" class="maplink-box">
+                <!--<a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Videos</a> -->
+                <a href="#" onclick="loadInBigMap('https://fifthlap.blogspot.com/2025/02/photo-albums-5th-lap-i.html')">Album</a>
+                <a href="#" onclick="loadInBigMap('https://fifthlap.blogspot.com/2023/06/5th-lap-index.html')">Blogs</a>
+            </div>
+            <div id="KangarooIs2011" class="maplink-box">
                 <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
                 <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
                 <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
             </div>
-            -->
+            <div id="LakeEyre2009" class="maplink-box">
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
+            </div>
+            <div id="Townsville1975" class="maplink-box">
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
+            </div>
+       
     </div>
       
 <script>

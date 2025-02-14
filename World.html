@@ -3,9 +3,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a13.10.38">
-    
-<!-- for responisveness, scalability-->
+<meta name="version" content="a14.18.03" <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     
 <!-- Page description for search engines -->
@@ -154,30 +152,33 @@ of course, flying.">
 
 <body>
 
-    <div class="sidepanes", id="Left-Lane"
+    <div class="sidepanes", id="Left-Pane"
     style="position: absolute; top: 0px; left: 0px; background-color: rgb(109, 255, 80); width:14%; height: 100%;">
         
         <!-- Text Blocks with Link Lists ( left pane )-->
         <div class="PrimeLink-container">  <!-- Return to the World page-->
-            <div class="PrimeLink">HOME</div>
-            <ul class="link-list">
-                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyWorld.svg')">World</a></li>
-            </ul>
+            <div class="PrimeLink"><a href="#" onClick="loadInBigMap('./MyWorld.svg')">HOME</a></div>
         </div>
 
         <div class="PrimeLink-container">
-            <div class="PrimeLink">Austral Asia (Australia & Asia)</div>
+            <div class="PrimeLink"><a href="./Australia/Australia.html">Australia & NZ</a></div>
             <ul class="link-list">
                 <li class="link-item"><a href="./Australia/Australia.html">Australia</a></li>
                 <li class="link-item"><a href="#" onClick="loadInBigMap('./MyCentralia.svg')">New Zealand</a></li>
-                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyCentralia.svg')">East Asia</a></li>
-                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyCentralia.svg')">SE Asia</a></li>
-                <li class="link-item"><a href="#" onClick="loadInBigMap('./MyCentralia.svg')">South Asia</a></li>
             </ul>
         </div>
 
         <div class="PrimeLink-container">
-            <div class="PrimeLink">Europe</div>
+            <div class="PrimeLink"><a href="./SE-Asia/SE-Asia.html">SE Asia</a></div>
+            <ul class="link-list">
+                <li class="link-item"><a href="./SE-Asia/Indonesia.html">Indonesia</a></li>
+                <li class="link-item"><a href="./SE-Asia/Malaysia.html">Malaysia</a></li>
+                <li class="link-item"><a href="./SE-Asia/Philippines.html">Philippines</a></li>
+            </ul>
+        </div>
+
+        <div class="PrimeLink-container">
+            <div class="PrimeLink"><a href="./Europe/Europe.html">Europe</a></div>
             <ul class="link-list">
                 <li class="link-item"><a href="./Europe/Iceland.html">Iceland</a></li>
                 <li class="link-item"><a href="./Europe/ScandinaviaBaltic.html">Scandinavia & Baltic</a></li>
@@ -187,7 +188,7 @@ of course, flying.">
         </div>
 
         <div class="PrimeLink-container">
-            <div class="PrimeLink">Americas</div>
+            <div class="PrimeLink"><a href="./Europe/Iceland.html">Americas</a></div>
             <ul class="link-list">
                 <li class="link-item"><a href="#" onClick="loadInBigMap('./MyAmericas.svg')">North America</a></li>
                 <li class="link-item"><a href="#" onClick="loadInBigMap('./MyAmericas.svg')">Central America</a></li>
@@ -195,7 +196,15 @@ of course, flying.">
             </ul>
         </div>
         <div class="PrimeLink-container">
-            <div class="PrimeLink">Africa</div>
+            <div class="PrimeLink"><a href="./Middle East/Middle East.html">Middle East</a></div>
+            <ul class="link-list">
+                <li class="link-item"><a href="./Middle East/Jordan.html">Jordan</a></li>
+                <li class="link-item"><a href="./Middle East/Turkey.html">Turkey</a></li>
+                <li class="link-item"><a href="./Middle East/UAE.html">UAE</a></li>
+            </ul>
+        </div>
+        <div class="PrimeLink-container">
+            <div class="PrimeLink"><a href="./Africa/Africa.html">Africa</a></div>
             <ul class="link-list">
                 <li class="link-item"><a href="./Africa/Egypt.html">Egypt</a></li>
                 <li class="link-item"><a href="./Africa/Ethiopia.html">Ethiopia</a></li>
@@ -205,7 +214,7 @@ of course, flying.">
         </div>
 
         <div class="PrimeLink-container">
-            <div class="PrimeLink">The Polars</div>
+            <div class="PrimeLink"><a href="./Polars/Polars.html">Polars</a></div>
             <ul class="link-list">
                 <li class="link-item"><a href="./Polars/Antarctica.html">Antarctica</a></li>
                 <li class="link-item"><a href="./Polars/Arctic.html">Arctic & Greenland</a></li>
@@ -267,7 +276,7 @@ of course, flying.">
     style="position: absolute; top: 0; left: 86%; background-color: rgb(255, 243, 80); width:14%; height: 100%;"> </div>
 
      
-    <div class="bigmapContainer" style="background: lightblue " >
+    <div class="bigmapContainer" id="Middle" style="background: lightblue " >
 
         <!-- Load the big map into the central work area -->
         <Object id="BigMap" data="./MyWorld.svg" type="image/svg+xml" title="Click an expedition to view"> </object>
@@ -276,7 +285,11 @@ of course, flying.">
             <!-- Youtube and Google photo doesn't allow their links to be opeened in Object Frame-->
 
             <div id="australia" class="maplink-box">
-                <a href="#" onclick="loadNewPage('./Australia/Australia.html')">Go Australia</a>
+                <a href="#" onclick="loadNewPage('./Australia/Australia.html')">Go Australia/NZ</a>
+            </div>
+
+            <div id="NewZealand2012" class="maplink-box">
+                <a href="#" onclick="loadNewPage('./Australia/Australia.html')">Go Australia/NZ</a>
             </div>
             
             <div id="ScandinaviaBaltic2016" class="maplink-box">
@@ -304,6 +317,11 @@ of course, flying.">
                 <a href="https://goo.gl/photos/pcMBK1pMM9xy7BnR6">album</a>
                 <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Blogs</a>
             </div>
+            <div id="Iberia2005" class="maplink-box">
+                <p>Iberia Expedition 2005</p>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Footprint</a>
+                <a href="./Europe/Europe.html">Go Europe</a>
+            </div>
             
             <div id="latin-america" class="maplink-box">
                 <p>Latin-America Expedition 2014</p>
@@ -316,8 +334,8 @@ of course, flying.">
                 <p>Egypt Expedition 2018</p>
                 <a href="./Africa/Egypt.html">Footprint</a>
                 <!-- <a href="./UnderConstruction.html">Videos</a>
-                <a href="./UnderConstruction.html">Album</a> -->
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Blogs</a>
+                <a href="./UnderConstruction.html">Album</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Blogs</a>  -->
                 <a href="./Africa/Africa.html">Go Africa</a>
             </div>
 
@@ -325,8 +343,8 @@ of course, flying.">
                 <p>Ethiopia Expedition 2019</p>
                 <a href="./Africa/Ethiopia.html">Footprint</a>
                 <a href="https://www.youtube.com/playlist?list=PLSXTW29KgLgvzM7RrAAC19tUpxp5vx3p0">Videos</a>
-                <a href="./UnderConstruction.html">Album</a>
-                <a href="./UnderConstruction.html">Blogs</a>
+                <!-- <a href="./UnderConstruction.html">Album</a>
+                <a href="./UnderConstruction.html">Blogs</a> -->
                 <a href="./Africa/Africa.html">Go Africa</a>
             </div>
             
@@ -355,7 +373,6 @@ of course, flying.">
                 <a href="#" onclick="loadInBigMap('https://2013argentinachile.blogspot.com/2016/11/index-argentina-chile-self-drive.html')">Blogs</a>
             </div>
 
-           
             <div id="ArcticGreenland2018" class="maplink-box">
                 <p>Arctic Expedition 2018</p>
                 <!-- <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Videos</a>
@@ -370,24 +387,51 @@ of course, flying.">
                 <a href="https://vimeo.com/247103346">album</a>
                 <a href="#" onclick="loadInBigMap('https://2017chileantarcticabrazil.blogspot.com/2018/01/index-2017-chile-antarctica-brazil.html')">Blogs</a>
             </div>            
-            <div id="philippines" class="maplink-box">
-                <p>Philippines Expedition 2018</p>
+            <div id="Philippines2019" class="maplink-box">
+                <p>Philippines Expedition 2019</p>
+                <a href="./SE-Asia/Philippines.html">Footprint</a>
                 <a href="https://www.youtube.com/playlist?list=PLSXTW29KgLguk0EKG0G3nsbHxYjNM0k9T">Videos</a>
+                <a href="./SE-Asia/SE-Asia.html">Go SE Asia</a>
                 <!-- <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">album</a>
                 <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Blogs</a>  -->
             </div>
-            <div id="malaysia" class="maplink-box">
-                <p>Borneo Malaysia Expedition 2018</p>
+            <div id="Indonesia2011" class="maplink-box">
+                <p>Indonesia Expedition 2011</p>
+                <a href="./SE-Asia/Indonesia.html">Footprint</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Videos</a>
+                <a href="./SE-Asia/SE-Asia.html">Go SE Asia</a>
+                <!-- <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">album</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Blogs</a>  -->
+            </div>
+            <div id="Malaysia2019" class="maplink-box">
+                <p>Borneo Malaysia Expedition 2019</p>
+                <a href="./SE-Asia/Malaysia.html">Footprint</a>
                 <a href="https://www.youtube.com/playlist?list=PLSXTW29KgLgtcBGsR9BxVB8-A4avku0JD">Videos</a>
+                <a href="./SE-Asia/SE-Asia.html">Go SE Asia</a>
                 <!--<a href="#" onclick="loadInBigMap('/UnderConstruction.html')">album</a>
                 <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Blogs</a> -->
+            </div>
+            <div id="Turkey2018" class="maplink-box">
+                <p>Turkey Expedition 2018</p>
+                <a href="./Middle East/Turkey.html">Footprint</a>
+                <a href="./Middle East/Middle East.html">Go Middle East</a>
+            </div>
+            <div id="Jordan2018" class="maplink-box">
+                <p>Jordan Expedition 2018</p>
+                <a href="./Middle East/Jordan.html">Footprint</a>
+                <a href="./Middle East/Middle East.html">Go Middle East</a>
+            </div>
+            
+            <div id="UAE2018" class="maplink-box">
+                <p>Turkey Expedition 2018</p>
+                <a href="./Middle East/UAE.html">Footprint</a>
+                <a href="./Middle East/Middle East.html">Go Middle East</a>
             </div>
             <div id="china" class="maplink-box">
                 <p>China since 1982..</p>
                 <!-- <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Videos</a>
                 <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Blogs</a> -->
                 <a href="https://chinaalbums.blogspot.com/2016/12/index-to-china-photo-albums.html">album</a>
-                
             </div>
             <div id="japan" class="maplink-box">
                 <p>Japan Winter Expedition 2022</p>
@@ -439,7 +483,7 @@ of course, flying.">
             // const paths = Array.from(svgDoc.getElementsByClassName("hover-effect")); //query all hover-effect paths
            // This works as well 
            const paths = svgDoc.querySelectorAll(".hover-effect"); // query all hover-effect paths 
-                                                                                 // console.log("all pathid",paths); // debug trace
+                                                                                 console.log("all pathid",paths); // debug trace
           let popupLocked = false;  // initialise popupLocked flag, this is used to
                                     // fix the positon of the pop up lists for mouse
                                     // to move in and click.
@@ -447,7 +491,7 @@ of course, flying.">
         paths.forEach( path => {
             const linkId = path.dataset.pathId; // Assume each path has a `data-link-id` attribute
             let links = document.getElementById(linkId); // matchup with the corresponding links div
-                                                                                console.log("linkId -->", linkId, "links-->",links);  // debug trace
+                                                                               console.log("linkId -->", linkId, "links-->",links);  // debug trace
             // Show links on hover
             path.addEventListener("mouseover", (event) => {
                if (!popupLocked) {

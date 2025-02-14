@@ -3,7 +3,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a08.11.18.35">
+<meta name="version" content="a14.10.24">
     
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
@@ -157,9 +157,8 @@
 
         <!-- Text Blocks with Link Lists ( left pane )-->
         <div class="PrimeLink-container">
-            <div class="PrimeLink">Africa Expeditions</div>
+            <div class="PrimeLink"><a href="./Africa.html">Africa</a></div>
             <ul class="link-list">
-                <li class="link-item"><a href="./Africa.html">Africa HOME</a></li>
                 <li class="link-item"><a href="./Egypt.html">Egypt</a></li>
                 <li class="link-item"><a href="./Ethiopia.html">Ethiopia</a></li>
                 <li class="link-item"><a href="./Eastern Africa.html">Eastern Africa</a></li>
@@ -289,7 +288,7 @@
             // const paths = Array.from(svgDoc.getElementsByClassName("hover-effect")); //query all hover-effect paths
            // This works as well 
            const paths = svgDoc.querySelectorAll(".hover-effect"); // query all hover-effect paths 
-                                                                                 console.log("all pathid",paths); // debug trace
+                                                                                // console.log("all pathid",paths); // debug trace
           let popupLocked = false;  // initialise popupLocked flag, this is used to
                                     // fix the positon of the pop up lists for mouse
                                     // to move in and click.
@@ -297,7 +296,7 @@
         paths.forEach( path => {
             const linkId = path.dataset.pathId; // Assume each path has a `data-link-id` attribute
             let links = document.getElementById(linkId); // matchup with the corresponding links div
-                                                                                console.log("linkId -->", linkId, "links-->",links);  // debug trace
+                                                                               // console.log("linkId -->", linkId, "links-->",links);  // debug trace
             // Show links on hover
             path.addEventListener("mouseover", (event) => {
                if (!popupLocked) {

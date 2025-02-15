@@ -3,7 +3,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a14.18.03" <!-- for responisveness, scalability-->
+<meta name="version" content="a15.19.02"> <!-- for responisveness, scalability -->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     
 <!-- Page description for search engines -->
@@ -13,7 +13,7 @@ The travels are documented primary using photography and video recordings, plus 
 Modes of travels includes 4x4 cars, campers, ships, hiking, walking and 
 of course, flying.">
 
-<title>Oz Wanderer Word Footprints</title>
+<title>Oz Wanderer World Footprints</title>
 
 <style>
     /* global styles for non-inheritable settings */
@@ -169,11 +169,12 @@ of course, flying.">
         </div>
 
         <div class="PrimeLink-container">
-            <div class="PrimeLink"><a href="./SE-Asia/SE-Asia.html">SE Asia</a></div>
+            <div class="PrimeLink"><a href="./Asia/Asia.html">Asia</a></div>
             <ul class="link-list">
-                <li class="link-item"><a href="./SE-Asia/Indonesia.html">Indonesia</a></li>
-                <li class="link-item"><a href="./SE-Asia/Malaysia.html">Malaysia</a></li>
-                <li class="link-item"><a href="./SE-Asia/Philippines.html">Philippines</a></li>
+                <li class="link-item"><a href="./Asia/East Asia/East Asia.html">East Asia</a></li>
+                <li class="link-item"><a href="./Asia/SE-Asia/SE-Asia.html">SE Asia</a></li>
+                <!-- <li class="link-item"><a href="./Asia/South Asia/South Asia.html">South Asia</a></li>
+                <li class="link-item"><a href="./Asia/Central Asia/Central Asia.html">Central Asia</a></li> -->
             </ul>
         </div>
 
@@ -430,17 +431,18 @@ of course, flying.">
                 <a href="./Middle East/UAE.html">Footprint</a>
                 <a href="./Middle East/Middle East.html">Go Middle East</a>
             </div>
-            <div id="china" class="maplink-box">
+            <div id="China2020" class="maplink-box">
                 <p>China since 1982..</p>
-                <!-- <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Videos</a>
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Blogs</a> -->
+                <a href="./Asia/East Asia/China.html">Footprint</a>
                 <a href="https://chinaalbums.blogspot.com/2016/12/index-to-china-photo-albums.html">album</a>
             </div>
-            <div id="japan" class="maplink-box">
+            <div id="Japan2022" class="maplink-box">
                 <p>Japan Winter Expedition 2022</p>
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
+                <a href="./Asia/East Asia/Japan.html">Footprint</a>
+            </div>
+            <div id="HongKong2020" class="maplink-box">
+                <p>Hong Kong Expedition 2020</p>
+                <a href="./Asia/East Asia/Hong Kong.html">Footprint</a>
             </div>
             <div id="usa-route66" class="maplink-box">
                 <p>Across Northern American via Route 66</p>
@@ -486,7 +488,7 @@ of course, flying.">
             // const paths = Array.from(svgDoc.getElementsByClassName("hover-effect")); //query all hover-effect paths
            // This works as well 
            const paths = svgDoc.querySelectorAll(".hover-effect"); // query all hover-effect paths 
-                                                                                 console.log("all pathid",paths); // debug trace
+                                                                                // console.log("all pathid",paths); // debug trace
           let popupLocked = false;  // initialise popupLocked flag, this is used to
                                     // fix the positon of the pop up lists for mouse
                                     // to move in and click.
@@ -494,7 +496,7 @@ of course, flying.">
         paths.forEach( path => {
             const linkId = path.dataset.pathId; // Assume each path has a `data-link-id` attribute
             let links = document.getElementById(linkId); // matchup with the corresponding links div
-                                                                               console.log("linkId -->", linkId, "links-->",links);  // debug trace
+                                                                               //console.log("linkId -->", linkId, "links-->",links);  // debug trace
             // Show links on hover
             path.addEventListener("mouseover", (event) => {
                if (!popupLocked) {

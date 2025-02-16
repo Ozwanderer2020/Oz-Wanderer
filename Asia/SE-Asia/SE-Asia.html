@@ -156,16 +156,14 @@
         
 
         <!-- Text Blocks with Link Lists ( left pane )-->
+         
+        <div class="PrimeLink">
+            <button onClick='loadNewPage("/World.html")'>WORLD</button>
+        </div>
         <div class="PrimeLink-container">
             <div class="PrimeLink"><a href="../Asia.html">Asia HOME</a></div>
-            <ul class="link-list">
-                <li class="link-item"><a href="../East Asia/East Asia.html">East Asia</a></li>
-                <li class="link-item"><a href="../South Asia/South Asia.html">South Asia</a></li>
-                <!-- <li class="link-item"><a href="../Central Asia/Central Asia.html">Central Asia</a></li> -->
-            </ul>
-        </div>
-
-        <div class="PrimeLink-container">
+            <div class="PrimeLink"><a href="../East Asia/East Asia.html">East Asia HOME</a></div>
+            <div class="PrimeLink"><a href="../South Asia/South Asia.html">South Asia HOME</a></div>
             <div class="PrimeLink"><a href="./SE-Asia.html">SE Asia HOME</a></div>
             <ul class="link-list">
                 <li class="link-item"><a href="./Indonesia.html">Indonesia</a></li>
@@ -174,9 +172,6 @@
             </ul>
         </div>
 
-        <div class="PrimeLink">
-            <button onClick='loadNewPage("/World.html")'>WORLD</button>
-        </div>
 
         <script>
             function loadNewPage(url) {

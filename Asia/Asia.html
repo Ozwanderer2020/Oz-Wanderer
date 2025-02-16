@@ -3,7 +3,9 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a15.16.13"> <!-- for responisveness, scalability-->
+<meta name="version" content="a16.10.04">
+
+<!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     
 <!-- Page description for search engines -->
@@ -156,7 +158,11 @@ of course, flying.">
     style="position: absolute; top: 0px; left: 0px; background-color: rgb(109, 255, 80); width:14%; height: 100%;">
         
         <!-- Text Blocks with Link Lists ( left pane )-->
-        <div class="PrimeLink-container">  <!-- Return to the World page-->
+        <div class="PrimeLink">
+            <button onClick='loadNewPage("/World.html")'>WORLD</button>
+        </div>
+
+        <div class="PrimeLink-container">
             <div class="PrimeLink">ASIA HOME</div>
         </div>
 
@@ -177,9 +183,11 @@ of course, flying.">
                 <li class="link-item"><a href="./SE-Asia/Philippines.html">Philippines</a></li>
             </ul>
         </div>
-
-        <div class="PrimeLink">
-            <button onClick='loadNewPage("/World.html")'>WORLD</button>
+        <div class="PrimeLink-container">
+            <div class="PrimeLink"><a href="./South Asia/South Asia.html">South Asia</a></div>
+            <ul class="link-list">
+                <li class="link-item"><a href="./South Asia/Nepal.html">Nepal</a></li>
+            </ul>
         </div>
 
         <p style="font-size: 0.6rem;"><br><br><br><br> Version: <span id="version" ></span> </p>
@@ -257,6 +265,7 @@ of course, flying.">
             <div id="HongKong2020" class="maplink-box">
                 <p>Hong Kong Hikings since 2001</p>
                 <a href="./East Asia/Hong Kong.html">Footprint</a>
+                <a href="https://www.youtube.com/playlist?list=PLSXTW29KgLgu3Kp2A4IYg_VSmT61IRlNW">Videos</a>
                 <a href="./East Asia/East Asia.html">Go East Asia</a>
             </div>
 
@@ -286,6 +295,12 @@ of course, flying.">
                 <!--<a href="#" onclick="loadInBigMap('/UnderConstruction.html')">album</a>
                 <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Blogs</a> -->
             </div>
+            <div id="Nepal2015" class="maplink-box">
+                <p>Nepal Expedition 2015</p>
+                <a href="./South Asia/Nepal.html">Footprint</a>
+                <a href="./South Asia/South Asia.html">Go South Asia</a>
+            </div>
+    </div>
 
             <script>
                 function loadNewPage(url) {

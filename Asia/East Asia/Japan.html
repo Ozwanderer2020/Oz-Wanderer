@@ -3,7 +3,9 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a15.17.53"> <!-- for responisveness, scalability-->
+<meta name="version" content="a16.10.25"> 
+
+<!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     
 <!-- Page description for search engines -->
@@ -157,28 +159,21 @@ of course, flying.">
         
         <!-- Text Blocks with Link Lists ( left pane )-->
 
+        <div class="PrimeLink">
+            <button onClick='loadNewPage("/World.html")'>WORLD</button>
+        </div>
         <div class="PrimeLink-container">
             <div class="PrimeLink"><a href="../Asia.html">Asia HOME</a></div>
-            <div class="PrimeLink"><a href="./East Asia.html"></a>East Asia HOME</div>
+            <div class="PrimeLink"><a href="../SE-Asia/SE-Asia.html">SE Asia HOME</a></div>
+            <div class="PrimeLink"><a href="../South Asia/South Asia.html">South Asia HOME</a></div>
+            <div class="PrimeLink"><a href="./East Asia.html">East Asia HOME</a></div>
             <ul class="link-list">
                 <li class="link-item"><a href="./China.html">China</a></li>
                 <li class="link-item"><a href="./Japan.html">Japan</a></li>
                 <li class="link-item"><a href="./Hong Kong.html">Hong Kong</a></li>
             </ul>
         </div>
-        <div class="PrimeLink-container">
-        <div class="PrimeLink"><a href="../SE-Asia/SE-Asia.html"></a>SE Asia HOME</div>
-            <ul class="link-list">
-                <li class="link-item"><a href="../SE-Asia/Indonesia.html">Indonesia</a></li>
-                <li class="link-item"><a href="../SE-Asia/Malaysia.html">Malaysia</a></li>
-                <li class="link-item"><a href="../SE-Asia/Philippines.html">Philippines</a></li>
-            </ul>
-        </div>
-                
-        <div class="PrimeLink">
-            <button onClick='loadNewPage("/World.html")'>WORLD</button>
-        </div>
-
+        
         <script>
             function loadNewPage(url) {
                 window.top.location.href=url;

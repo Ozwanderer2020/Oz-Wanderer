@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
+<meta name="version" content="a16.15.46"> 
+
+<!-- for responisveness, scalability-->
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    
+<!-- Page description for search engines -->
+<meta name="description" content="Oz Wanderer is a Worldwide traveler. Here are the stories of his travels for lesisure 
+since retirement on 911 ( 11 Sept 2001 ). His footprints covers the Arctic and Antarctic and 80 odd countries in between.
+The travels are documented primary using photography and video recordings, plus footprint logging using GPS loggers. 
+Modes of travels includes 4x4 cars, campers, ships, hiking, walking and 
+of course, flying.">
+
+<title>Oz Wanderer Canada Footprints</title>
+
+<style>
+    /* global styles for non-inheritable settings */
+*,  
+*::before,
+*::after { box-sizing: border-box;  /* use this box model, so padding is included in total size */
+            margin: 0;
+    }
+    body {
+        margin: 0; /* Remove default browser margin */
+        padding: 0;
+        text-align: center;
+        font: 1rem;
+    }
+    .container {  /* refers to the body container */
+        display: flex;
+        height: 100vh; /* Make the parent container take up the full viewport height */
+        Margin: 0;
+    }
+    .sidepanes {
+        max-width: 14%;
+        padding: 1%;
+    }
+    .sidepanes {
+        overflow: auto;
+    }
+    .bigmapContainer{
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 14%;
+        width: 72%;
+        height: 100%;
+        margin: 0 auto; /* Center the container */
+        text-align: center;
+        /* border: 10px solid blue;  /*use for debugging */
+    }
+
+    #BigMap {  /*# is used for id, "." is for classes*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Fill the container's width */
+        height: 100%; /* Maintain aspect ratio */
+        object-fit: contain; /* Fit within the object frame */
+        overflow: hidden; /* Prevent content overflow */
+    }
+
+    .portrait-message {
+        display: none;
+        position: absolute; /* Allow positioning within the container */
+        text-align: center;
+        padding: 10px;
+        top: 80%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust for actual center alignment */
+        background-color: #f8d7da; /* Background for message box */
+        color: #721c24; /* Text color */
+        border: 1px solid #f5c6cb; /* Border styling */
+        border-radius: 5px; /* Rounded corners (optional) */
+        width: 80%; /* Adjust width as needed */
+        z-index: 9999; /* Ensure it is above other elements */
+    }
+   @media (max-width: 768px) and (orientation: portrait) {
+            .portrait-message {
+                display: block; /* Show the message if in portrait mode */
+            }
+   }
+   /* Container for each text block and link list */
+   .PrimeLink-container {
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* Text Block Style */
+        .PrimeLink {
+            background-color: #ddd;
+            padding: 1%;
+            margin-bottom: 2%;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Hidden List Style */
+        .link-list {
+            display: none;
+            margin-top: 1%;
+            padding: 0;
+            list-style-type: none;  /* no bullets */
+        }
+
+        /* Link Item Style */
+        .link-item {
+            padding: 1% 0;
+        }
+
+        .link-item a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .link-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Show the list when hovering over the container (text block + list) */
+        .PrimeLink-container:hover .link-list {
+            display: block;
+        }
+        /* popup links on maps */
+        .maplink-box {
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid #ccc;
+        padding: 3px;
+        border-radius: 3px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-size: 1 rem;
+        }
+
+        .maplink-box a {
+        display: block;
+        margin: 5px 0;
+        text-decoration: none;
+        color: blue;
+        }
+
+        .maplink-box a:hover {
+        text-decoration: underline;
+        }
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="sidepanes", id="Left-Pane"
+    style="position: absolute; top: 0px; left: 0px; background-color: rgb(109, 255, 80); width:14%; height: 100%;">
+        
+        <!-- Text Blocks with Link Lists ( left pane )-->
+         <div class="PrimeLink">
+            <button onClick='loadNewPage("/World.html")'>WORLD</button>
+        </div>
+
+        <div class="PrimeLink-container">
+            <div class="PrimeLink"><a href="../../Americas.html">Americas HOME</a></div>
+            <div class="PrimeLink"><a href="../North America.html">North America HOME</a></div>
+            <ul class="link-list">
+                <li class="link-item"><a href="./Canada.html">Canada</a></li>
+                <li class="link-item"><a href="../USA/USA.html">USA</a></li>
+            </ul>
+            <div class="PrimeLink"><a href="../../Central America/Central America.html">Central America HOME</a></div>
+            <div class="PrimeLink"><a href="../../South America/South America.html">South America HOME</a></div>
+        </div>
+       
+        
+        <script>
+            function loadNewPage(url) {
+                window.top.location.href=url;
+            }
+        </script>
+
+        <p style="font-size: 0.6rem;"><br><br><br><br> Version: <span id="version" ></span> </p>
+        <p style="font-size: 0.8rem;">&copy; 2025 Oz-Wanderer.com All rights reserved.</p>
+
+        <script>
+            // Get the version from the meta tag
+            const version = document.querySelector('meta[name="version"]').getAttribute('content');
+    
+            // Display it in the HTML element with id "version"
+            document.getElementById('version').textContent = version;
+
+            // Load an URL into the Object Frame BigMap
+
+            function loadInBigMap(url) {
+                  document.getElementById('BigMap').data = url;
+                  }
+
+// modify the above later to fix "return" problem 
+
+//               function loadInBigMap(url) {
+//   const bigMap = document.getElementById('BigMap');
+    
+    // Update the object frame content
+ //   bigMap.data = url;
+
+    // Update the browser history
+ //   history.pushState({ url }, '', `?map=${encodeURIComponent(url)}`);
+//}
+
+// Event listener for back/forward button navigation
+//window.addEventListener('popstate', (event) => {
+//   const state = event.state;
+//   const bigMap = document.getElementById('BigMap');
+    
+//    if (state && state.url) {
+        // Load the URL from the state object
+//        bigMap.data = state.url;
+//    } else {
+        // Optional: Reset to a default page or behavior
+//        bigMap.data = 'default.html';
+//    }
+//});
+        </script>    
+    
+    </div>
+
+    <div class="sidepanes", id="Right-Pane"
+    style="position: absolute; top: 0; left: 86%; background-color: rgb(255, 243, 80); width:14%; height: 100%;"> </div>
+
+     
+    <div class="bigmapContainer" id="Middle" style="background: lightblue " >
+
+        <!-- Load the big map into the central work area -->
+        <Object id="BigMap" data="./Footprint Canada to 2024.svg" type="image/svg+xml" title="Click an expedition to view"> </object>
+
+            <!-- Map Popup link list -->
+            <!-- Youtube and Google photo doesn't allow their links to be opeened in Object Frame-->
+
+            <div id="InsidePassage2012" class="maplink-box">
+                <p>Canada 2012 Alaskan Cruise</p>
+                <a href="./Canada.html">Footprint</a>
+                <a href="../North America.html">Go North America</a>
+            </div>
+
+            <div id="West2009" class="maplink-box">
+                <p>Canada 2009 Rockies</p>
+                <a href="./Canada.html">Footprint</a>
+                <a href="../North America.html">Go North America</a>
+            </div>
+
+            <div id="Aurora2024" class="maplink-box">
+                <p>Aurora 2024</p>
+                <a href="./Canada.html">Footprint</a>
+                <a href="../North America.html">Go North America</a>
+            </div>
+
+            <div id="West-East2012" class="maplink-box">
+                <p>Canada 2012 to Sydney NS</p>
+                <a href="./Canada.html">Footprint</a>
+                <a href="../North America.html">Go North America</a>
+            </div>
+
+            <div id="USA" class="maplink-box">
+                <a href="../USA/USA.html">Go USA</a>
+            </div>
+            
+            <script>
+                function loadNewPage(url) {
+                    window.top.location.href=url;
+                }
+                </script>
+                
+       
+    </div>
+      
+<script>
+
+    // Check if the map has been loaded into Object "BigMap"
+    // Once loaded, look for all elements with the class "hover-effect"
+    // For each of the returned elements, get their data-path-id attribute
+    // Match the data-path-id with the links block for that path and 
+    // listen if the mouse is interacting with it in either one of the following
+    // mouseover, mousemove, mouseout, mouseenter, mouseleave
+    // and popup the links block when mouse in over the path
+    // links block contain links related to that path.
+    // If nothing happens, keep listening one path at a cycling of the loop
+        
+    document.addEventListener("DOMContentLoaded", () => {
+          const svgObject = document.getElementById("BigMap");
+    
+          svgObject.addEventListener("load", () => {
+            
+            const svgDoc = svgObject.contentDocument;
+            
+            // const paths = Array.from(svgDoc.getElementsByClassName("hover-effect")); //query all hover-effect paths
+           // This works as well 
+           const paths = svgDoc.querySelectorAll(".hover-effect"); // query all hover-effect paths 
+                                                                                 //console.log("all pathid",paths); // debug trace
+          let popupLocked = false;  // initialise popupLocked flag, this is used to
+                                    // fix the positon of the pop up lists for mouse
+                                    // to move in and click.
+
+        paths.forEach( path => {
+            const linkId = path.dataset.pathId; // Assume each path has a `data-link-id` attribute
+            let links = document.getElementById(linkId); // matchup with the corresponding links div
+                                                                               //console.log("linkId -->", linkId, "links-->",links);  // debug trace
+            // Show links on hover
+            path.addEventListener("mouseover", (event) => {
+               if (!popupLocked) {
+                links.style.display = "block";  // make links list visible
+                links.style.left = `${event.pageX + 2}px`;
+                links.style.top = `${event.pageY -3 }px`;
+                popupLocked=true;
+                }
+            });
+            // Update position on mousemove ( only if not locked )
+            path.addEventListener("mousemove", (event) => {
+            if (!popupLocked) {
+               links.style.left = `${event.pageX + 1}px`;
+               links.style.top = `${event.pageY + 1}px`;
+               popupLocked=true;
+                }
+             });
+            // Hide links on mouseout (only if not locked)
+            path.addEventListener("mouseout", () => {
+                links.style.display = "none";   // make links list invisible
+                popupLocked=false;
+            });
+            // Lock popup when mouse enters the links block
+           links.addEventListener("mouseenter", () => {
+            links.style.display = "block";  // make links list visible
+            popupLocked = true; // Prevent the popup from moving
+           });
+            // Unlock popup and hide it when the mouse leaves the links block
+            links.addEventListener("mouseleave", () => {
+              popupLocked=false;
+              links.style.display = "none";  // make links list visible
+            });
+        });
+    });
+});
+</script>
+    
+    <div class="portrait-message">
+        <p style="text-align: center;"> Your screen is too narrow for the best viewing experience. </p>
+        <p style="text-align: center;"> Please rotate your device or use a larger screen.</p>
+    </div>
+
+</body>
+
+</html>

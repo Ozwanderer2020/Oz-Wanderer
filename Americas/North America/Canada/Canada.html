@@ -3,7 +3,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a16.15.46"> 
+<meta name="version" content="a20.14.04"> 
 
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
@@ -240,24 +240,31 @@ of course, flying.">
             <div id="InsidePassage2012" class="maplink-box">
                 <p>Canada 2012 Alaskan Cruise</p>
                 <a href="./Canada.html">Footprint</a>
+                <a href="https://photos.google.com/share/AF1QipMnMmHecHwp0GdrdJZifjHgQr3c-BTJXDIKhzVusUkhT4wsyUJdFu0JAN-Yqtr1fA?key=VE9CZnliUTIwbTdRTW1pOU5GckE1R01RT01nSlRn">Album</a>
                 <a href="../North America.html">Go North America</a>
             </div>
 
             <div id="West2009" class="maplink-box">
                 <p>Canada 2009 Rockies</p>
                 <a href="./Canada.html">Footprint</a>
+                <a href="https://northamericatrips.blogspot.com/2016/12/index-to-photo-albums.html">Album</a>
                 <a href="../North America.html">Go North America</a>
             </div>
 
-            <div id="Aurora2024" class="maplink-box">
+            <div id="Aurora2024" class="maplink-box">  <!-- this is within the Canada map-->
                 <p>Aurora 2024</p>
-                <a href="./Canada.html">Footprint</a>
+                <a href="#" onclick="loadInBigMap('./Footprint Yellowknife 2024.svg')">Footprint</a>
                 <a href="../North America.html">Go North America</a>
+            </div>
+
+            <div id="Yellowknife2024" class="maplink-box">
+                <a href="#" onclick="loadInBigMap('./Footprint Canada to 2024.svg')">Go Canada</a>
             </div>
 
             <div id="West-East2012" class="maplink-box">
                 <p>Canada 2012 to Sydney NS</p>
                 <a href="./Canada.html">Footprint</a>
+                <a href="https://photos.google.com/share/AF1QipMnMmHecHwp0GdrdJZifjHgQr3c-BTJXDIKhzVusUkhT4wsyUJdFu0JAN-Yqtr1fA?key=VE9CZnliUTIwbTdRTW1pOU5GckE1R01RT01nSlRn">North America Album</a>
                 <a href="../North America.html">Go North America</a>
             </div>
 
@@ -296,7 +303,7 @@ of course, flying.">
             // const paths = Array.from(svgDoc.getElementsByClassName("hover-effect")); //query all hover-effect paths
            // This works as well 
            const paths = svgDoc.querySelectorAll(".hover-effect"); // query all hover-effect paths 
-                                                                                 //console.log("all pathid",paths); // debug trace
+                                                                                 console.log("all pathid",paths); // debug trace
           let popupLocked = false;  // initialise popupLocked flag, this is used to
                                     // fix the positon of the pop up lists for mouse
                                     // to move in and click.
@@ -304,7 +311,7 @@ of course, flying.">
         paths.forEach( path => {
             const linkId = path.dataset.pathId; // Assume each path has a `data-link-id` attribute
             let links = document.getElementById(linkId); // matchup with the corresponding links div
-                                                                               //console.log("linkId -->", linkId, "links-->",links);  // debug trace
+                                                                              console.log("linkId -->", linkId, "links-->",links);  // debug trace
             // Show links on hover
             path.addEventListener("mouseover", (event) => {
                if (!popupLocked) {

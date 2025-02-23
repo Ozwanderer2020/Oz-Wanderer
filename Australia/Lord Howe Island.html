@@ -3,16 +3,19 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a23.20.34">
-    
+<meta name="version" content="a23.20.12"> 
+
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     
 <!-- Page description for search engines -->
-<meta name="description" content="OzWanderer roams the Outbacks of Australia in 4x4 campers since 2010.
-5 Laps of Australia has been done plus plenty of shorter expiditions.">
+<meta name="description" content="Oz Wanderer is a Worldwide traveler. Here are the stories of his travels for lesisure 
+since retirement on 911 ( 11 Sept 2001 ). His footprints covers the Arctic and Antarctic and 80 odd countries in between.
+The travels are documented primary using photography and video recordings, plus footprint logging using GPS loggers. 
+Modes of travels includes 4x4 cars, campers, ships, hiking, walking and 
+of course, flying.">
 
-<title>Oz Wanderer Australia Footprints</title>
+<title>Oz Wanderer Lord Howe Island Footprints</title>
 
 <style>
     /* global styles for non-inheritable settings */
@@ -131,7 +134,7 @@
         padding: 3px;
         border-radius: 3px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        /* font-size: 0.8rem; */
+        font-size: 1 rem;
         }
 
         .maplink-box a {
@@ -152,11 +155,10 @@
 <body>
 
     <div class="sidepanes", id="Left-Pane"
-        style="position: absolute; top: 0px; left: 0px; background-color: rgb(109, 255, 80); width:14%; height: 100%;">
+    style="position: absolute; top: 0px; left: 0px; background-color: rgb(109, 255, 80); width:14%; height: 100%;">
         
-
         <!-- Text Blocks with Link Lists ( left pane )-->
-        <div class="PrimeLink">
+         <div class="PrimeLink">
             <button onClick='loadNewPage("/World.html")'>WORLD</button>
         </div>
 
@@ -206,17 +208,15 @@
             <li class="link-item"><a href="#" onClick="loadInBigMap('/UnderConstruction.html')">NT</li>
          </ul>
         </div>
-
-        
+       
         <script>
             function loadNewPage(url) {
                 window.top.location.href=url;
             }
         </script>
-            
+
         <p style="font-size: 0.6rem;"><br><br><br><br> Version: <span id="version" ></span> </p>
         <p style="font-size: 0.8rem;">&copy; 2025 Oz-Wanderer.com All rights reserved.</p>
-
 
         <script>
             // Get the version from the meta tag
@@ -256,124 +256,35 @@
 //        bigMap.data = 'default.html';
 //    }
 //});
-        </script>
-   
+        </script>    
+    
     </div>
 
-    <!-- RIGHT panel -->
-
-<div class="sidepanes",  id="Right-Pane"
-    style="position: absolute; top: 0; left: 86%; background-color: rgb(255, 243, 80); width:14%; height: 100%;">
-
-    <!-- Right Panel code here -->
-
-</div>
+    <div class="sidepanes", id="Right-Pane"
+    style="position: absolute; top: 0; left: 86%; background-color: rgb(255, 243, 80); width:14%; height: 100%;"> </div>
 
      
-    <div class="bigmapContainer" style="background: lightblue " >
+    <div class="bigmapContainer" id="Middle" style="background: lightblue " >
 
         <!-- Load the big map into the central work area -->
-        <Object id="BigMap" data="./Australia 2024.svg" type="image/svg+xml" title="Click an expedition to view"> </object>
+        <Object id="BigMap" data="./Footprint Lord Howe Island 2008.svg" type="image/svg+xml" title="Click an expedition to view"> </object>
 
             <!-- Map Popup link list -->
-             <!-- Youtube and Google photo doesn't allow their links to be opeened in Object Frame-->
+            <!-- Youtube and Google photo doesn't allow their links to be opeened in Object Frame-->
 
-            <div id="2011Lap" class="maplink-box">
-
-             <!--    <a href="./AustraliaVideos.html">Videos</a>
-                <a href="./Australiaalbums.html"<Album</a> -->
-                <a href="#" onclick="loadInBigMap('https://australiadt.blogspot.com/2015/12/index.html')">Blog</a>
-            </div>        
-
-            <div id="2013Lap" class="maplink-box">
-                <p>2nd Lap of Australia 2013</p>
-                <p>Cape York, Gulf and Desert</p>
-                <a href="https://www.youtube.com/watch?v=E-JuorfWVXk" target="_blank">Videos</a>
-                <a href="https://photos.app.goo.gl/YRJcKcQqFVaZZNq5A">Album</a>
+            <div id="LordHowe2008" class="maplink-box">
+                <p>Lord Howe Bush Walks</p>
+                <a href="https://photos.app.goo.gl/zUfx4a6f3fjHp1aP8">Album</a>
+                <a href="./Australia.html">Go Australia</a>
             </div>
+          
             
-            <div id="2015Lap" class="maplink-box">
-                <a href="#">Sorry,</a>
-                <a href="#">Under</a>
-                <a href="#">Construction</a>
-            </div>
-            
-            <div id="2017Lap" class="maplink-box">
-                <a href="https://www.youtube.com/watch?v=uMRv5vfFDzs" target="_blank">Video</a>
-                <!-- <a href="#" onclick="loadInBigMap('/UnderConstruction.html')"<Album</a>
-                <a href="#" onclick="loadInBigMap('https://2014southernafrica.blogspot.com/2014/10/index.html')">Blogs</a> -->
-            </div> 
-            <div id="2024Lap" class="maplink-box">
-                <a href="#">Sorry,</a>
-                <a href="#">Under</a>
-                <a href="#">Construction</a>
-            </div>             
-            <div id="tas2010" class="maplink-box">
-                <a href="#">Sorry,</a>
-                <a href="#">Under</a>
-                <a href="#">Construction</a>
-            </div>
-            <div id="VicHigh2011" class="maplink-box">
-                <a href=https://www.youtube.com/watch?v=leALWzPhqpQ&t=200" target="_blank">Videos</a>
-                <!-- <a href=""<Album</a>
-                <a href="#" onclick="loadInBigMap('')">Blogs</a>  -->
-            </div>
-            <div id="4x4-adventures" class="maplink-box">
-                <a href="https://www.youtube.com/playlist?list=PLSXTW29KgLgt13Lnv1EgQV2OZ1JC8yQdp" target="_blank">Videos</a>
-                <!-- <a href="#" onclick="loadInBigMap('')"<Album</a>
-                <a href="#" onclick="loadInBigMap('')">Blogs</a>  -->
-            </div>
-
-            <div id="LizardIs2013" class="maplink-box">
-                <p>Lizard Island snorkelling</p>
-                <a href="https://photos.app.goo.gl/Qq1MH8w3oFmXf3ws9">Album</a>
-            </div>
-
-            <div id="Simpson2013" class="maplink-box">
-                <p>Simpson Desert Crossing 2013</p>
-                <a href="https://www.youtube.com/watch?v=3xhMdhB9xPA&list=PLSXTW29KgLgt13Lnv1EgQV2OZ1JC8yQdp&index=11&t=9s&pp=gAQBiAQB" target="_blank">Video</a>
-                <a href="https://photos.app.goo.gl/9NG3YfHkyU5uguuD7">Album</a>
-            </div>
-
-            <div id="Tip2013" class="maplink-box">
-                <p>The Tip of Australia</p>
-                <a href="https://photos.app.goo.gl/YRJcKcQqFVaZZNq5A">2013 Lap 2 Album</a>
-                <a href="https://photos.app.goo.gl/7DqB2ofMjs8KwnNj6">2006 Cape York Expedition Album</a>
-            </div>
-             
-            <div id="VicHigh2014" class="maplink-box">
-                <!-- <a href="">Videos</a>
-                <a href="#" onclick="loadInBigMap('')"<Album</a> -->
-                <a href="#" onclick="loadInBigMap('https://vichighcountry2014.blogspot.com/2016/06/index.html')">Blogs</a>
-            </div>
-            <div id="SandiMaiden" class="maplink-box">
-                <!-- <a href="#">Sorry</a>
-                <a href="#" onclick="loadInBigMap('')">Under</a> -->
-                <a href="#" onclick="loadInBigMap('https://sandi-maiden.blogspot.com/2025/02/sandis-maiden-trip-photo-albums.html')">Albums</a>
-            </div>
-
-
-
-            <div id="5thLapI" class="maplink-box">
-                <!--<a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Videos</a> -->
-                <a href="#" onclick="loadInBigMap('https://fifthlap.blogspot.com/2025/02/photo-albums-5th-lap-i.html')">Album</a>
-                <a href="#" onclick="loadInBigMap('https://fifthlap.blogspot.com/2023/06/5th-lap-index.html')">Blogs</a>
-            </div>
-            <div id="KangarooIs2011" class="maplink-box">
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
-            </div>
-            <div id="LakeEyre2009" class="maplink-box">
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
-            </div>
-            <div id="Townsville1975" class="maplink-box">
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
-                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
-            </div>
+            <script>
+                function loadNewPage(url) {
+                    window.top.location.href=url;
+                }
+                </script>
+                
        
     </div>
       
@@ -399,7 +310,7 @@
             // const paths = Array.from(svgDoc.getElementsByClassName("hover-effect")); //query all hover-effect paths
            // This works as well 
            const paths = svgDoc.querySelectorAll(".hover-effect"); // query all hover-effect paths 
-
+                                                                                 //console.log("all pathid",paths); // debug trace
           let popupLocked = false;  // initialise popupLocked flag, this is used to
                                     // fix the positon of the pop up lists for mouse
                                     // to move in and click.
@@ -407,21 +318,21 @@
         paths.forEach( path => {
             const linkId = path.dataset.pathId; // Assume each path has a `data-link-id` attribute
             let links = document.getElementById(linkId); // matchup with the corresponding links div
-                      
+                                                                               //console.log("linkId -->", linkId, "links-->",links);  // debug trace
             // Show links on hover
             path.addEventListener("mouseover", (event) => {
                if (!popupLocked) {
                 links.style.display = "block";  // make links list visible
-                links.style.left = `${event.pageX + 1}px`;
-                links.style.top = `${event.pageY + 1}px`;
+                links.style.left = `${event.pageX + 2}px`;
+                links.style.top = `${event.pageY -3 }px`;
                 popupLocked=true;
                 }
             });
             // Update position on mousemove ( only if not locked )
             path.addEventListener("mousemove", (event) => {
             if (!popupLocked) {
-               links.style.left = `${event.pageX -3 }px`;
-               links.style.top = `${event.pageY - 3}px`;
+               links.style.left = `${event.pageX + 1}px`;
+               links.style.top = `${event.pageY + 1}px`;
                popupLocked=true;
                 }
              });

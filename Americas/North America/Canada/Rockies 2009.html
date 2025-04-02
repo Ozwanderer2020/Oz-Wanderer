@@ -3,13 +3,13 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-<meta name="version" content="a20250402.1125">
-    <meta property="og:title" content="USA Footprints">
-    <meta name="description" content="My USA travel footprints, blogs and vlogs">
-    <meta property="og:image" content="/OzWandererMastHead(s).png">
-    <meta property="og:url" content="https://oz-wanderer.com/Americas/North America/USA/USA.html">
-    <meta property="og:type" content="website">
-    
+<meta name="version" content="a2050402.2056">
+<meta property="og:title" content="Rockies 2009 Footprints">
+<meta name="description" content="My Canada travel footprints, blogs and vlogs">
+<meta property="og:image" content="/OzWandererMastHead(s).png">
+<meta property="og:url" content="https://oz-wanderer.com/Americas/North America/Canada/Canada.html">
+<meta property="og:type" content="website">
+
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     
@@ -20,7 +20,7 @@ The travels are documented primary using photography and video recordings, plus 
 Modes of travels includes 4x4 cars, campers, ships, hiking, walking and 
 of course, flying.">
 
-<title>Oz Wanderer USA Footprints</title>
+<title>Oz Wanderer Canada Footprints</title>
 
 <style>
     /* global styles for non-inheritable settings */
@@ -171,8 +171,8 @@ of course, flying.">
             <div class="PrimeLink"><a href="../../Americas.html">Americas HOME</a></div>
             <div class="PrimeLink"><a href="../North America.html">North America HOME</a></div>
             <ul class="link-list">
-                <li class="link-item"><a href="../Canada/Canada.html">Canada</a></li>
-                <li class="link-item"><a href="./USA.html">USA</a></li>
+                <li class="link-item"><a href="./Canada.html">Canada</a></li>
+                <li class="link-item"><a href="../USA/USA.html">USA</a></li>
             </ul>
             <div class="PrimeLink"><a href="../../Central America/Central America.html">Central America HOME</a></div>
             <div class="PrimeLink"><a href="../../South America/South America.html">South America HOME</a></div>
@@ -237,52 +237,14 @@ of course, flying.">
     <div class="bigmapContainer" id="Middle" style="background: lightblue " >
 
         <!-- Load the big map into the central work area -->
-        <Object id="BigMap" data="./Footprint USA to 2024.svg" type="image/svg+xml" title="Click an expedition to view"> </object>
+        <Object id="BigMap" data="./Footprint Rockies 2009.svg" type="image/svg+xml" title="Click an expedition to view"> </object>
 
             <!-- Map Popup link list -->
             <!-- Youtube and Google photo doesn't allow their links to be opeened in Object Frame-->
 
-            <div id="Canada" class="maplink-box">
-                <p>Canada 2024 Aurora</p>
-                <a href="../Canada/Canada.html">Go Canada</a>
-            </div>
-
-            <div id="InsidePassage2012" class="maplink-box">
-                <p>Inside Passage Cruise</p>
-                <a href="./Inside Passage 2012.html">Footprint</a>
-                <a href="https://photos.google.com/share/AF1QipMnMmHecHwp0GdrdJZifjHgQr3c-BTJXDIKhzVusUkhT4wsyUJdFu0JAN-Yqtr1fA?key=VE9CZnliUTIwbTdRTW1pOU5GckE1R01RT01nSlRn">Album</a>
-                <a href="../North America.html">Go North America</a>
-            </div>
-
-            <div id="West2009" class="maplink-box">
-                <p>Western North America Expdition</p>
-                <a href="./West 2009.html">Footprint</a>
-                <a href="https://northamericatrips.blogspot.com/2016/12/index-to-photo-albums.html">Album</a>
-                <a href="../North America.html">Go North America</a>
-            </div>
-
-            <div id="West-East2012" class="maplink-box">
-                <p>West-East via Route 66</p>
-                <a href="./USA.html">Footprint</a>
-                <a href="https://northamericatrips.blogspot.com/2025/02/index-to-west-to-east-expedition-via.html">Route 66 Album</a>
-                <a href="https://photos.google.com/share/AF1QipMnMmHecHwp0GdrdJZifjHgQr3c-BTJXDIKhzVusUkhT4wsyUJdFu0JAN-Yqtr1fA?key=VE9CZnliUTIwbTdRTW1pOU5GckE1R01RT01nSlRn">North America Album</a>
-                <a href="../North America.html">Go North America</a>
-            </div>
-
-            <div id="Hawaii2024" class="maplink-box">
-                <p>Hawaii 2024</p>
-                <a href="#" onclick="loadInBigMap('./Footprint Hawaii 2024.svg')">Footprint</a>
-                <a href="../North America.html">Go North America</a>
-            </div>
-
-            <div id="Hawaii2024r" class="maplink-box">  <!-- return path-->
-                <a href="#" onclick="loadInBigMap('./Footprint USA to 2024.svg')">Go USA</a>
-                <a href="../North America.html">Go North America</a>
-            </div>
-
-            <div id="California2024" class="maplink-box">
-                <p>California 2024</p>
-                <a href="./USA.html">Footprint</a>
+            <div id="Rockies2009" class="maplink-box">  <!-- this is within the Canada map-->
+                <p>Aurora at Yellowknife 2024</p>
+                <a href="./Canada.html">Go Canada</a>
                 <a href="../North America.html">Go North America</a>
             </div>
             
@@ -317,7 +279,7 @@ of course, flying.">
             // const paths = Array.from(svgDoc.getElementsByClassName("hover-effect")); //query all hover-effect paths
            // This works as well 
            const paths = svgDoc.querySelectorAll(".hover-effect"); // query all hover-effect paths 
-                                                                                 //console.log("all pathid",paths); // debug trace
+                                                                                 console.log("all pathid",paths); // debug trace
           let popupLocked = false;  // initialise popupLocked flag, this is used to
                                     // fix the positon of the pop up lists for mouse
                                     // to move in and click.
@@ -325,7 +287,7 @@ of course, flying.">
         paths.forEach( path => {
             const linkId = path.dataset.pathId; // Assume each path has a `data-link-id` attribute
             let links = document.getElementById(linkId); // matchup with the corresponding links div
-                                                                               //console.log("linkId -->", linkId, "links-->",links);  // debug trace
+                                                                              console.log("linkId -->", linkId, "links-->",links);  // debug trace
             // Show links on hover
             path.addEventListener("mouseover", (event) => {
                if (!popupLocked) {

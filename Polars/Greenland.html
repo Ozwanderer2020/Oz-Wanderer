@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="Oz Wanderer Footprints">
+<meta property="og:title" content="Oz Wanderer Greenland Footprints">
 <!-- Page description for search engines -->
 <meta name="description" content="Oz Wanderer is a Worldwide traveler. Here are the stories of his travels for lesisure 
 since retirement on 911 ( 11 Sept 2001 ). His footprints covers the Arctic and Antarctic and 80 odd countries in between.
@@ -12,13 +12,14 @@ The travels are documented primary using photography and video recordings, plus 
 Modes of travels includes 4x4 cars, campers, ships, hiking, walking and 
 of course, flying.">
 <meta property="og:image" content="/OzWandererMastHead(s).png">
-<meta property="og:url" content="https://oz-wanderer.com/polars/Arctic.html">
-<meta name="version" content="a20250405.0642">
+<meta property="og:url" content="https://oz-wanderer.com/Polars/Greenland.html">
+
+<meta name="version" content="a20250405.1133">
     
 <!-- for responisveness, scalability-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 
-<title>Oz Wanderer Arctic Footprints</title>
+<title>Oz Wanderer Greenland Footprints</title>
 
 <style>
     /* global styles for non-inheritable settings */
@@ -239,20 +240,65 @@ of course, flying.">
     <div class="bigmapContainer" style="background: lightblue " >
 
         <!-- Load the big map into the central work area -->
-        <Object id="BigMap" data="./Footprint Arctic 2018.svg" type="image/svg+xml" title="Click an expedition to view"> </object>
+        <Object id="BigMap" data="./Footprint Greenland 2018.svg" type="image/svg+xml" title="Click an expedition to view"> </object>
 
             <!-- Map Popup link list -->
              <!-- Youtube and Google photo doesn't allow their links to be opeened in Object Frame-->
 
-            <div id="ArcticGreenland2018" class="maplink-box">
+            <div id="AtSeaFromSvalbard" class="maplink-box">
+                <p>At Sea From Svalbard</p>
+                <a href="https://www.youtube.com/watch?v=v9uNfXXSS5w">Video</a>
+                <a href="https://photos.app.goo.gl/o3NVnkFMDuQP2Wj2A">Album</a>
+                <a href="#" onclick="loadInBigMap('https://ozwanderer-arctic.blogspot.com/2025/04/at-sea-to-greenland.html')">Blog</a>
+            </div>
+        
+            <div id="GRNday1" class="maplink-box">
+                <p>Greenland Day 1</p>
                 <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
                 <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
                 <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
             </div>
-            
-            <div id="Greenland2018" class="maplink-box">
-                <p>Greenland Expedition</p>
-                <a href="./Greenland.html">Footprint</a>
+            <div id="GRNday2" class="maplink-box">
+                <p>Greenland Day 2</p>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
+            </div>
+            <div id="GRNday3" class="maplink-box">
+                <p>Greenland Day 3</p>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
+            </div>
+            <div id="GRNday4" class="maplink-box">                
+                <p>Greenland Day 4</p>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
+            </div>            
+            <div id="GRNday5" class="maplink-box">                
+                <p>Greenland Day 5</p>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
+            </div>
+            <div id="GRNday6" class="maplink-box">                
+                <p>Greenland Day 6</p>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
+            </div>
+            <div id="GRNday7" class="maplink-box">                
+                <p>Greenland Day 7</p>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
+            </div>
+            <div id="AtSeaToIceland" class="maplink-box">                
+                <p>At Sea To Iceland</p>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Sorry</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Under</a>
+                <a href="#" onclick="loadInBigMap('/UnderConstruction.html')">Construction</a>
             </div>
     </div>
       
@@ -278,15 +324,16 @@ of course, flying.">
             // const paths = Array.from(svgDoc.getElementsByClassName("hover-effect")); //query all hover-effect paths
            // This works as well 
            const paths = svgDoc.querySelectorAll(".hover-effect"); // query all hover-effect paths 
-
+                                                                                console.log("all pathid",paths); // debug trace
           let popupLocked = false;  // initialise popupLocked flag, this is used to
-                                    // fix the positon of the pop up lists for mouse
+           // fix the positon of the pop up lists for mouse
                                     // to move in and click.
+        const handledLinkIds = new Set(); // Track which popup divs we've already wired
 
         paths.forEach( path => {
             const linkId = path.dataset.pathId; // Assume each path has a `data-link-id` attribute
             let links = document.getElementById(linkId); // matchup with the corresponding links div
-                      
+                                                                                 console.log("linkId -->", linkId, "links-->",links);  // debug trace         
             // Show links on hover
             path.addEventListener("mouseover", (event) => {
                if (!popupLocked) {
@@ -309,18 +356,27 @@ of course, flying.">
                 links.style.display = "none";   // make links list invisible
                 popupLocked=false;
             });
-            // Lock popup when mouse enters the links block
-           links.addEventListener("mouseenter", () => {
-            links.style.display = "block";  // make links list visible
-            popupLocked = true; // Prevent the popup from moving
-           });
+            // Only attach mouseenter/leave *once* per unique popup element
+            if (!handledLinkIds.has(linkId)) {
+                links.addEventListener("mouseenter", () => {
+                links.style.display = "block";
+                popupLocked = true;
+                });
+
             // Unlock popup and hide it when the mouse leaves the links block
             links.addEventListener("mouseleave", () => {
               popupLocked=false;
               links.style.display = "none";  // make links list visible
             });
-        });
+
+            // Add event listeners for the popup div only once per unique linkId
+            if (!handledLinkIds.has(linkId)) {
+                handledLinkIds.add(linkId);  // Mark this linkId as handled to avoid re-adding listeners
+            }
+            // Or just this ?  handledLinkIds.add(linkId);
+        };
     });
+});
 });
 </script>
     

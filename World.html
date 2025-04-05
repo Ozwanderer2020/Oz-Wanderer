@@ -598,7 +598,7 @@ of course, flying.">
         paths.forEach( path => {
             const linkId = path.dataset.pathId; // Assume each path has a `data-link-id` attribute
             let links = document.getElementById(linkId); // matchup with the corresponding links div
-                                                                               //console.log("linkId -->", linkId, "links-->",links);  // debug trace
+                                                                               // console.log("linkId -->", linkId, "links-->",links);  // debug trace
             // Show links on hover
             path.addEventListener("mouseover", (event) => {
                if (!popupLocked) {
